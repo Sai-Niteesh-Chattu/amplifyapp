@@ -152,15 +152,15 @@
         }
       }
     },
-    "authamplifyappe2716b8e": {
+    "authamplifyappcc86c29a": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify58f32fd2f83f4-staging-64331-deployment/amplify-cfn-templates/auth/amplifyappe2716b8e-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify6df730cb84d04-staging-91816-deployment/amplify-cfn-templates/auth/amplifyappcc86c29a-cloudformation-template.json",
         "Parameters": {
-          "identityPoolName": "amplifyappe2716b8e_identitypool_e2716b8e",
+          "identityPoolName": "amplifyappcc86c29a_identitypool_cc86c29a",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "amplife2716b8e",
-          "userPoolName": "amplifyappe2716b8e_userpool_e2716b8e",
+          "resourceNameTruncated": "amplifcc86c29a",
+          "userPoolName": "amplifyappcc86c29a_userpool_cc86c29a",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -177,10 +177,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "amplife2716b8e_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "amplifcc86c29a_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "e2716b8e",
-          "resourceName": "amplifyappe2716b8e",
+          "sharedId": "cc86c29a",
+          "resourceName": "amplifyappcc86c29a",
           "authSelections": "identityPoolAndUserPool",
           "useDefault": "default",
           "userPoolGroupList": "",
@@ -209,7 +209,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authamplifyappe2716b8e"
+        "authamplifyappcc86c29a"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -304,7 +304,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authamplifyappe2716b8e",
+            "authamplifyappcc86c29a",
             "Outputs.IdentityPoolId"
           ]
         },
